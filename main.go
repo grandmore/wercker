@@ -6,10 +6,12 @@ import (
 	"net/http"
 )
 
+// CitiesResponse holds our cities array
 type CitiesResponse struct {
 	Cities []string `json:"cities"`
 }
 
+//CityHandler processes http response and returns array
 func CityHandler(res http.ResponseWriter, req *http.Request) {
 
 	citiesResponse := &CitiesResponse{
@@ -28,6 +30,7 @@ func CityHandler(res http.ResponseWriter, req *http.Request) {
 			"Paris",
 			"Seoul",
 			"Austin",
+			"London",
 		},
 	}
 	data, _ := json.MarshalIndent(citiesResponse, "", "  ")
