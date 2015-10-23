@@ -7,7 +7,7 @@ dev:
     # Create cities-controller.json for initialization
     - script:
         name: create cities-controller.json
-        code: ./create_cities-controller.json.sh cat ./cities-controller.json
+        code: ./create_cities-controller.json.sh
 
     - internal/watch:
         code: |
@@ -34,7 +34,7 @@ build:
     # Create cities-controller.json for initialization
     - script:
         name: create cities-controller.json
-        code: ./create_cities-controller.json.sh
+        code: ./create_cities-controller.json.sh cat ./cities-controller.json
 
     # Copy binary to location that gets passed along to deploy
     - script:
@@ -61,7 +61,7 @@ deploy:
         username: $KUBERNETES_USERNAME
         password: $KUBERNETES_PASSWORD
         insecure-skip-tls-verify: true
-        command: create -f cities-controller.json
+        command: create -f ${WERCKER_OUTPUT_DIR}/cities-controller.json
 
     - kubectl:
         server: $KUBERNETES_MASTER
