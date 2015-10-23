@@ -1,5 +1,5 @@
 # The container definition we want to use for developing our app
-box: google/golang
+box: golang
 
 # Defining the dev pipeline
 dev:
@@ -11,7 +11,7 @@ dev:
         reload: true
 
 build:
-    box: google/golang
+    box: golang
     steps:
 
     - wercker/golint
@@ -38,7 +38,7 @@ build:
 
 
 deploy:
-    box: google/golang
+    box: golang
     steps:
     # use the scratch step to build a container from scratch based on the files present
     - internal/docker-scratch-push:
@@ -74,4 +74,4 @@ deploy:
         password: $KUBERNETES_PASSWORD
         insecure-skip-tls-verify: true
         command: rolling-update cities
-        image: quay.io/wercker/wercker-kubernetes-quay:$WERCKER_GIT_COMMIT
+        image: quay.io/grandmore/wercker:$WERCKER_GIT_COMMIT
