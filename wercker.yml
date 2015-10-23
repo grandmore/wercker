@@ -36,7 +36,6 @@ build:
         name: copy binary
         code: cp app cities-service.json cities-controller.json "$WERCKER_OUTPUT_DIR"
 
-
 deploy:
     box: golang
     steps:
