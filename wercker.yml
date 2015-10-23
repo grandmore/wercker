@@ -44,6 +44,7 @@ build:
 deploy:
     box: golang
     steps:
+    
     # use the scratch step to build a container from scratch based on the files present
     - internal/docker-scratch-push:
         username: $QUAY_USERNAME
@@ -62,6 +63,7 @@ deploy:
         password: $KUBERNETES_PASSWORD
         insecure-skip-tls-verify: true
         command: create -f cities-service.json
+        debug: true
 
     - kubectl:
         server: $KUBERNETES_MASTER
@@ -69,6 +71,7 @@ deploy:
         password: $KUBERNETES_PASSWORD
         insecure-skip-tls-verify: true
         command: create -f cities-controller.json
+        debug: true
 
 
     # Update the replica controller to $WERCKER_GIT_COMMIT
