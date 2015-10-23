@@ -55,6 +55,7 @@ deploy:
         repository: quay.io/grandmore/wercker
         registry: https://quay.io
 
+
     # Run this to create the rc and service
     initialize:
     - kubectl:
