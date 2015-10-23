@@ -29,7 +29,7 @@ build:
     # Create cities-controller.json for initialization
     - script:
         name: create cities-controller.json
-        code: ./create_cities-controller.json.sh
+        code: ./create_cities-controller.json.sh cat ./cities-controller.json
 
     # Copy binary to location that gets passed along to deploy
     - script:
