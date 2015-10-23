@@ -1,4 +1,4 @@
-# The container definition we want to use for developing our app
+#The container definition we want to use for developing our app
 box: golang
 
 # Defining the dev pipeline
