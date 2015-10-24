@@ -94,4 +94,4 @@ deploy:
         password: $KUBERNETES_PASSWORD
         insecure-skip-tls-verify: true
         command: rolling-update cities
-        image: quay.io/grandmore/wercker:$WERCKER_GIT_COMMIT
+        image: gcr.io/kub-cluster-eu/wercker:$WERCKER_GIT_COMMIT
