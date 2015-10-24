@@ -34,7 +34,7 @@ build:
     # Create cities-controller.json for initialization
     - script:
         name: create cities-controller.json
-        code: ./create_cities-controller.json.sh cat ./cities-controller.json
+        code: ./create_cities-controller.json.sh
 
     # Copy binary to location that gets passed along to deploy
     - script:
@@ -51,7 +51,7 @@ deploy:
         password: $QUAY_PASSWORD
         cmd: ./app
         tag: $WERCKER_GIT_COMMIT
-        ports: "5000"
+        ports: "5001"
         repository: quay.io/grandmore/wercker
         registry: https://quay.io
 

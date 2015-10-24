@@ -11,7 +11,7 @@
       "createExternalLoadBalancer": true,
       "ports": [
          {
-           "port": 5000,
+           "port": 5001,
            "targetPort": "http-server",
            "protocol": "TCP"
          }
