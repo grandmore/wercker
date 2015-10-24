@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-// CitiesResponse holds our cities array
+//  CitiesResponse holds our cities array
 type CitiesResponse struct {
 	Cities []string `json:"cities"`
 }
