@@ -61,7 +61,7 @@ deploy:
     - internal/docker-push:
         username: _token
         password: $GCR_AUTH_TOKEN
-        repository: gcr.io/kub-cluster-eu/wercker
+        repository: gcr.io/eu-clusters/wercker
         registry: https://gcr.io
         tag: $WERCKER_GIT_COMMIT
         ports: "5001"
@@ -94,4 +94,4 @@ deploy:
         password: $KUBERNETES_PASSWORD
         insecure-skip-tls-verify: true
         command: rolling-update cities
-        image: gcr.io/kub-cluster-eu/wercker:$WERCKER_GIT_COMMIT
+        image: gcr.io/eu-clusters/wercker:$WERCKER_GIT_COMMIT

@@ -26,7 +26,7 @@ cat > cities-controller.json <<EOF
         "containers": [
           {
             "imagePullPolicy": "Always",
-            "image": "gcr.io/kub-cluster-eu/wercker:${WERCKER_GIT_COMMIT}",
+            "image": "gcr.io/eu-clusters/wercker:${WERCKER_GIT_COMMIT}",
             "name": "cities",
             "ports": [
               {
