@@ -12,7 +12,7 @@
       "ports": [
          {
            "port": 5001,
-           "targetPort": "http-server",
+           "targetPort": "cities-http",
            "protocol": "TCP"
          }
       ],

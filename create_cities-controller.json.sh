@@ -30,7 +30,7 @@ cat > cities-controller.json <<EOF
             "name": "cities",
             "ports": [
               {
-                "name": "http-server",
+                "name": "cities-http",
                 "containerPort": 5001,
                 "protocol": "TCP"
               }
